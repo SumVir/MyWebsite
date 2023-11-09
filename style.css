@@ -1,0 +1,149 @@
+
+       
+    body {
+        background-color: #85a290;
+        margin: 0px;
+        overflow: auto;
+    }
+     main {
+       margin-left: 20px;
+       margin-right: 20px;
+    }
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      list-style-type: none;
+      background-color: #85a290;
+      margin-bottom: 0px;
+      border-radius: 0px;
+      
+      
+      
+    }
+    
+    
+    .navbar ul{
+     list-style-type: none;
+     background-color: rgb(78, 73, 73);
+     padding: 0px;
+     margin: 0px;
+     border-radius: 0px;
+     overflow: hidden;
+     margin-top: 0px;
+    
+    }
+    
+    a {
+     color: white;
+     text-decoration: none;
+     padding: 15px;
+     display: block;
+     text-align: center;
+     margin-left: 150px;
+    }
+    .navbar a:hover {
+      background-color: #85a290;
+      border-radius: 70px;
+      cursor: pointer;
+      color: #3e2b2c;
+      box-shadow: 0 0 18px rgba(9, 9, 9, 0.5);
+      transform: perspective(10deg);
+      transition: all 2s ease
+
+      
+
+    }
+    .navbar li{
+      float: left;
+      font-size: 25px;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-style: italic;
+      margin-left: 0px;
+      margin-top: 10px;
+    }
+    .logowebsite{
+      width: 100px;
+      height: 100px;
+      margin-right: 20px;
+      float: right;
+      border-radius: 50%;
+      animation-name:logoSpin; /* Animation name defined with @keyframes */
+      animation-duration: 4s; /* Animation duration */
+      animation-timing-function: ease; /* Timing function */
+      animation-iteration-count: infinite; /* Run the animation infinitely */
+      
+    }
+    @keyframes logoSpin {
+      from {
+          transform: rotate(0deg);
+      }
+      to {
+          transform: rotate(360deg);
+      }
+    }
+    .logowebsite:hover{
+      opacity: 0.8;
+      transform:rotate(360deg);
+      transition: transform 2s ease;
+      background: radial-gradient(circle, green, #3e2b2c);
+      animation-play-state: paused;
+    }
+    
+    .home-container {
+      display: flex;
+      align-items: center; /* Center vertically */
+      justify-content: center; /* Center horizontally */
+      margin-left: 105px;
+      margin-right: 150px;
+      margin-top: 200px;
+
+  }
+  
+  .home-content {
+      font-size: 248%;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-style: oblique;
+      margin-right: 90px; /* Add some spacing between text and photo */
+      letter-spacing:normal;
+      margin-bottom: 40px;
+  }
+  
+  .photoweb {
+    width: 400px;
+    height: 400px;
+    margin:0px; /* Remove all margins */
+    position: absolute;
+    bottom:0px;
+    left: 0;
+    
+  }
+  
+  
+   
+  .footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #3e2b2c;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 0;
+    text-align: left;
+  }
+
+  .footer p,
+  .footer a {
+      display: inline;
+      margin: 0 10px; /* Add spacing between the text and the link */
+      
+  }
+  
+  .footer a:hover{
+    color:  #0072b1 ;
+    text-decoration:overline;
+  }
+  
