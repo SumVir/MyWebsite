@@ -229,27 +229,6 @@ a.linkedinlogolink{
     transition: box-shadow 1s;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .footer {
     position: fixed;
     bottom: 0;
@@ -274,3 +253,199 @@ a.linkedinlogolink{
     color:  #0072b1 ;
     text-decoration:overline;
   }
+  
+  /* Styles for small screens (e.g., smartphones) */
+  @media screen and (max-width: 768px) {
+    /* Add your responsive styles here */
+    body {
+        background-color: #85a290;
+        overflow: auto; /* Reset overflow to allow scrolling on small screens */
+      }
+    
+      main {
+        margin: 0;
+      }
+    
+      .navbar ul {
+        padding: 15;
+        margin: 0;
+        padding-bottom: 22px;
+        
+      }
+    
+      a {
+        padding: 10px;
+        text-align: center;
+        margin-left: 35px;
+        margin-top: 10px;
+      }
+    
+      .navbar li {
+        font-size: 26px;
+        padding-left: 20px;
+        padding-top: 5px;
+        margin-right: 15px;
+        
+        
+        
+      }
+    
+      .logowebsite {
+        width: 93px;
+        height: 93px;
+        margin-right: 27px;
+        margin-top: 12px;
+        
+        
+      }
+    
+      @keyframes logoSpin {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    
+      .logowebsite:hover {
+        opacity: 0.8;
+        transform: rotate(360deg);
+        transition: transform 2s ease;
+        background: radial-gradient(circle, green, #3e2b2c);
+      }
+
+      
+        
+    
+    
+    .contact-container {
+        flex-direction: column; /* Stack content vertically for small screens */
+        align-items: center; /* Center vertically */
+        justify-content: center; /* Center horizontally */
+        margin: 0px; /* Add some margin for spacing */
+        margin-left: 20px;
+        margin-top: 230px;
+        
+        
+    }
+
+    .contact-content {
+        font-size: 100%; /* Adjust font size for readability on small screens */
+        text-align: center; /* Center-align text */
+        margin: 20px; /* Add margin for spacing */
+        margin-left: 300px;
+        padding-left: 5;
+        display: vertical;
+    }
+
+    .text {
+        font-size: 38px; /* Adjust font size for small screens */
+        
+    }
+
+    .text:hover {
+        font-size: 38px; /* Adjust font size on hover for small screens */
+    }
+
+    .githublogo{
+        width: 94px;
+        height: 94px;
+        margin-right: 400px;
+        animation-name:logoSpin; /* Animation name defined with @keyframes */
+        animation-duration: 7s; /* Animation duration */
+        animation-timing-function: ease; /* Timing function */
+        animation-iteration-count: infinite; /* Run the animation infinitely */
+        
+        margin-left: 12px;
+        margin-top: 27px;
+      
+    }
+    
+    @keyframes logoSpin {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+    .githublogo:hover{
+        animation-play-state: paused; /* Pause the animation on hover */
+        width: 65px;
+        height: 65px;
+        border-radius: 40%;
+        box-shadow: 5px 5px 10px rgba(0,0,0, 0.30);
+        transition: box-shadow 1s;
+    }
+    
+        
+    
+    a.githublink{
+        display: inline-block;
+        width: 50px; /* Adjust the width to match your logo's width */
+        height: 50px; /* Adjust the height to match your logo's height */
+        margin-right: 400px;
+    }
+    
+    .xlogo{
+        width: 106px;
+        height: 105px;
+        margin-right: 400px;
+        margin-left: 0px;        
+        margin-bottom: 0px;
+    }
+    a.xlogolink{
+        display: inline-block;
+        width: 50px; /* Adjust the width to match your logo's width */
+        height: 50px; /* Adjust the height to match your logo's height */
+        margin-right: 400px;
+    }
+
+    .linkedinlogo{
+        width: 124.5px;
+        height: 124.5px;
+        margin-right: 400px;
+        margin-left: -9px;
+        margin-bottom: 0;
+
+    }
+    a.linkedinlogolink{
+        display: inline-block;
+        width: 50px; /* Adjust the width to match your logo's width */
+        height: 50px; /* Adjust the height to match your logo's height */
+        margin-right: 400px
+
+    }
+
+  .footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #3e2b2c;
+    font-size: 27px;
+    color: white;
+    text-align: center;
+    padding-left: 21px;
+    margin-bottom: 3;
+    text-align: left;
+  }
+
+  .footer p,
+  .footer a {
+      display: inline;
+      margin: 0 10px; /* Add spacing between the text and the link */
+     
+  }
+  .footer p{
+    font-size: 105%;
+  }
+  .footer a{
+    font-size: 100%;
+  }
+  .footer a:hover{
+    color:  #0072b1 ;
+    text-decoration:overline;
+  }
+}
