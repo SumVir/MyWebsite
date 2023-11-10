@@ -141,6 +141,121 @@
       margin: 0 10px; /* Add spacing between the text and the link */
       
   }
+   /* Styles for small screens (e.g., smartphones) */
+@media screen and (max-width: 768px) {
+  /* Add your responsive styles here */
+  body {
+    background-color: #85a290;
+    overflow: auto; /* Reset overflow to allow scrolling on small screens */
+  }
+
+  main {
+    margin: 0;
+  }
+
+  .navbar ul {
+    padding: 0;
+    margin: 0;
+    
+  }
+
+  a {
+    padding: 19px;
+    text-align: center;
+    margin-left: 29px;
+    margin-top: 0px;
+  }
+
+  .navbar li {
+    font-size: 20px;
+    margin-bottom: 26px;
+  }
+
+  .logowebsite {
+    width: 73px;
+    height: 73px;
+    margin-right: 25px;
+    float: right;
+    border-radius: 50%;
+    margin-top: 10px ;
+  }
+
+  @keyframes logoSpin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .logowebsite:hover {
+    opacity: 0.8;
+    transform: rotate(360deg);
+    transition: transform 2s ease;
+    background: radial-gradient(circle, green, #3e2b2c);
+  }
+
+  .home-container {
+    display: flex;
+    flex-direction: column-reverse; /* Stack content vertically for small screens */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    margin: 20px; /* Add some margin for spacing */
+    margin-top: 0px; /* Adjust top margin for small screens */
+    margin-left: 0px;
+    
+  
+  }  
+
+
+
+  .home-content {
+    font-size: 170%; /* Adjust font size for readability on small screens */
+    text-align: center; /* Center-align text */
+    margin: 20px; /* Add margin for spacing */
+    letter-spacing: normal; /* Reset letter-spacing */
+    margin-bottom: 20px; /* Adjust margin-bottom for small screens */
+    margin-left: 95px;
+    padding-left: 35%;
+  }
+
+  .photoweb2 {
+    display: center;
+    border-radius: 50%;
+    width: 33rem;
+    height: 33rem;
+    margin-left: 18.5%;
+  }
+
+
+  .footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #3e2b2c;
+    font-size: 25px;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 0;
+    text-align: left;
+  }
+
+  .footer p,
+  .footer a {
+      display: inline;
+      margin: 0 10px; /* Add spacing between the text and the link */
+      
+  }
+  
+  .footer a:hover{
+    color:  #0072b1 ;
+    text-decoration:overline;
+  }
+
+}
   
   .footer a:hover{
     color:  #0072b1 ;
