@@ -13,7 +13,7 @@
     body {
         background-color: #85a290;
         margin: 0px;
-        overflow: hidden;
+        overflow: auto;
     }
      main {
        margin-left: 20px;
