@@ -267,37 +267,46 @@ a.linkedinlogolink{
       }
     
       .navbar ul {
-        padding: 15;
+        padding: 0;
         margin: 0;
-        padding-bottom: 22px;
+        padding-top: 27px;
+  
         
       }
     
       a {
-        padding: 10px;
-        text-align: center;
-        margin-left: 35px;
-        margin-top: 10px;
-      }
+          display: block;
+          text-align: center;
+          padding: 15px;
+          margin-left: 0;
+          font-size: 24px;
+          padding-left: 30px;
+          padding-bottom: 10px;
+          padding-top: 5px;
+          
+        }
+      
+        .navbar li {
+          float: left;
+          font-size: 17px;
+          text-align: center;
+          margin-bottom: 10px;
+          margin-left: 0px;
+          padding-left: 5px;
+          padding-bottom: 3px;
+          
+        }
     
-      .navbar li {
-        font-size: 26px;
-        padding-left: 20px;
-        padding-top: 5px;
-        margin-right: 15px;
+        .logowebsite {
+          width: 90px;
+          height: 90px;
+          margin-right: 5%; /* Adjust as needed */
+          margin-left: auto; /* Align to the right */
+          border-radius: 50%;
+          margin-bottom: 7px;
+          margin-top: -8px;
+        }
         
-        
-        
-      }
-    
-      .logowebsite {
-        width: 93px;
-        height: 93px;
-        margin-right: 27px;
-        margin-top: 12px;
-        
-        
-      }
     
       @keyframes logoSpin {
         from {
@@ -314,7 +323,7 @@ a.linkedinlogolink{
         transition: transform 2s ease;
         background: radial-gradient(circle, green, #3e2b2c);
       }
-
+  
       
         
     
@@ -331,33 +340,33 @@ a.linkedinlogolink{
     }
 
     .contact-content {
-        font-size: 100%; /* Adjust font size for readability on small screens */
+        font-size: 20px; /* Adjust font size for readability on small screens */
         text-align: center; /* Center-align text */
         margin: 20px; /* Add margin for spacing */
-        margin-left: 300px;
+        margin-left: auto;
         padding-left: 5;
         display: vertical;
     }
 
     .text {
-        font-size: 38px; /* Adjust font size for small screens */
+        font-size: 23px; /* Adjust font size for small screens */
         
     }
 
     .text:hover {
-        font-size: 38px; /* Adjust font size on hover for small screens */
+        font-size: inherit; /* Adjust font size on hover for small screens */
     }
 
     .githublogo{
-        width: 94px;
-        height: 94px;
+        width: 43px;
+        height: 43px;
         margin-right: 400px;
         animation-name:logoSpin; /* Animation name defined with @keyframes */
         animation-duration: 7s; /* Animation duration */
         animation-timing-function: ease; /* Timing function */
         animation-iteration-count: infinite; /* Run the animation infinitely */
         
-        margin-left: 12px;
+        margin-left: 7px;
         margin-top: 27px;
       
     }
@@ -372,11 +381,11 @@ a.linkedinlogolink{
     }
     .githublogo:hover{
         animation-play-state: paused; /* Pause the animation on hover */
-        width: 65px;
-        height: 65px;
+        width: 43px;
+        height: 43px;
         border-radius: 40%;
-        box-shadow: 5px 5px 10px rgba(0,0,0, 0.30);
-        transition: box-shadow 1s;
+        box-shadow: none;
+        transition: none;
     }
     
         
@@ -389,11 +398,12 @@ a.linkedinlogolink{
     }
     
     .xlogo{
-        width: 106px;
-        height: 105px;
+        width: 45px;
+        height: 45px;
         margin-right: 400px;
-        margin-left: 0px;        
+        margin-left: 3px;        
         margin-bottom: 0px;
+        margin-top: 10px;
     }
     a.xlogolink{
         display: inline-block;
@@ -401,13 +411,22 @@ a.linkedinlogolink{
         height: 50px; /* Adjust the height to match your logo's height */
         margin-right: 400px;
     }
+    .xlogo:hover{
+        width: 45px;
+        height: 45px;
+        border-radius:50% ;
+        box-shadow: none;
+        transition: none;
+    }
+
 
     .linkedinlogo{
-        width: 124.5px;
-        height: 124.5px;
-        margin-right: 400px;
-        margin-left: -9px;
-        margin-bottom: 0;
+        width: 50px;
+        height: 50px;
+        margin-right: 12px;
+        margin-left: 0px;
+        margin-bottom: 30px;
+       
 
     }
     a.linkedinlogolink{
@@ -417,6 +436,25 @@ a.linkedinlogolink{
         margin-right: 400px
 
     }
+    .linkedinlogo:hover{
+       
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            box-shadow: none;
+            transition: none;
+        
+    }
+
+
+
+
+
+
+
+
+
+
 
   .footer {
     position: fixed;
