@@ -201,7 +201,7 @@
     color:  #0072b1 ;
     text-decoration:overline;
   }
-  
+
    /* Styles for small screens (e.g., smartphones) */
 @media screen and (max-width: 768px) {
     /* Add your responsive styles here */
@@ -217,6 +217,8 @@
     .navbar ul {
       padding: 0;
       margin: 0;
+      padding-top:10px;
+
       
     }
   
@@ -225,7 +227,7 @@
         text-align: center;
         padding: 15px;
         margin-left: 0;
-        font-size: 13px;
+        font-size: 14px;
         
         padding-bottom: 10px;
         padding-top: 5px;
@@ -234,31 +236,23 @@
     
       .navbar li {
         float: left;
-        font-size: 20px;
+        font-size: 17px;
         text-align: center;
         margin-bottom: 10px;
-        margin-left: px;
-        padding-left: 15px;
-        
+        margin-left: 0px;
+        padding-left: 5px;
         padding-bottom: 3px;
-        margin-bottom: 19.5px;
+        
       }
   
-    .logowebsite {
-      width: 50px;
-      height: 50px;
-      margin-right: 25px;
-      margin-left: 14%;
-      float: right;
-      border-radius: 50%;
-      margin-top: -60px ;
-      margin-bottom: 0px;
-      animation-name:logoSpin; /* Animation name defined with @keyframes */
-      animation-duration: 4s; /* Animation duration */
-      animation-timing-function: ease; /* Timing function */
-      animation-iteration-count: infinite; /* Run the animation infinitely */
+      .logowebsite {
+        width: 50px;
+        height: 50px;
+        margin-right: 5%; /* Adjust as needed */
+        margin-left: auto; /* Align to the right */
+        border-radius: 50%;
+      }
       
-    }
   
     @keyframes logoSpin {
       from {
@@ -382,4 +376,10 @@
         text-decoration:overline;
       }
 
- }
+
+
+  
+
+
+
+  }
