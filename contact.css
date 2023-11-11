@@ -111,8 +111,8 @@ a {
 }
 .text{
     background: linear-gradient(90deg, black, rgb(7, 44, 7));
-    background-clip: text;
     -webkit-background-clip: text;
+    background-clip: text;
     color: transparent;
     display: inline;
     animation: moveAndChange 7s linear infinite;
