@@ -156,29 +156,42 @@
   .navbar ul {
     padding: 0;
     margin: 0;
+    padding-top:10px;
+
     
   }
 
   a {
-    padding: 19px;
-    text-align: center;
-    margin-left: 29px;
-    margin-top: 0px;
-  }
+      display: block;
+      text-align: center;
+      padding: 15px;
+      margin-left: 0;
+      font-size: 14px;
+      
+      padding-bottom: 10px;
+      padding-top: 5px;
+      
+    }
+  
+    .navbar li {
+      float: left;
+      font-size: 17px;
+      text-align: center;
+      margin-bottom: 10px;
+      margin-left: 0px;
+      padding-left: 5px;
+      padding-bottom: 3px;
+      
+    }
 
-  .navbar li {
-    font-size: 20px;
-    margin-bottom: 26px;
-  }
-
-  .logowebsite {
-    width: 73px;
-    height: 73px;
-    margin-right: 25px;
-    float: right;
-    border-radius: 50%;
-    margin-top: 10px ;
-  }
+    .logowebsite {
+      width: 50px;
+      height: 50px;
+      margin-right: 5%; /* Adjust as needed */
+      margin-left: auto; /* Align to the right */
+      border-radius: 50%;
+    }
+    
 
   @keyframes logoSpin {
     from {
@@ -196,37 +209,49 @@
     background: radial-gradient(circle, green, #3e2b2c);
   }
 
+
   .home-container {
     display: flex;
     flex-direction: column-reverse; /* Stack content vertically for small screens */
     align-items: center; /* Center vertically */
     justify-content: center; /* Center horizontally */
     margin: 20px; /* Add some margin for spacing */
-    margin-top: 0px; /* Adjust top margin for small screens */
-    margin-left: 0px;
-    
-  
-  }  
+    margin-top: 0; /* Adjust top margin for small screens */
+    margin-left: 0;
+}
 
-
-
-  .home-content {
-    font-size: 170%; /* Adjust font size for readability on small screens */
+.home-content {
+    font-size: 130%; /* Adjust font size for readability on small screens */
     text-align: center; /* Center-align text */
     margin: 20px; /* Add margin for spacing */
     letter-spacing: normal; /* Reset letter-spacing */
-    margin-bottom: 20px; /* Adjust margin-bottom for small screens */
-    margin-left: 95px;
-    padding-left: 35%;
+    margin-left: 51px; /* Adjust margin-left for small screens */
+    padding-left: 0; /* Adjust padding-left for small screens */
+}
+
+.photoweb2 {
+    width: 55%;
+    border-radius: 50%;
+    height: auto;
+    margin-left: 77px;
+    margin-top: 90px;
+    border: 0px solid  black;
+    background-color: #7aa039;
+    animation: colorChange 5s linear infinite; 
   }
 
-  .photoweb2 {
-    display: center;
-    border-radius: 50%;
-    width: 33rem;
-    height: 33rem;
-    margin-left: 18.5%;
+  @keyframes colorChange {
+    0% {
+      background-color: #8ea798; /* Start color (red) */
+    }
+    50% {
+      background-color: #738e7e; /* Middle color (green) */
+    }
+    100% {
+      background-color: #809c8c; /* End color (blue) */
+    }
   }
+
 
 
   .footer {
@@ -235,10 +260,10 @@
     left: 0;
     right: 0;
     background-color: #3e2b2c;
-    font-size: 25px;
+    font-size: 10px;
     color: white;
     text-align: center;
-    padding: 10px;
+    padding: 7px;
     margin-bottom: 0;
     text-align: left;
   }
@@ -247,7 +272,7 @@
   .footer a {
       display: inline;
       margin: 0 10px; /* Add spacing between the text and the link */
-      
+      font-size: 15px;
   }
   
   .footer a:hover{
@@ -256,9 +281,5 @@
   }
 
 }
-  
-  .footer a:hover{
-    color:  #0072b1 ;
-    text-decoration:overline;
-  }
+
   
