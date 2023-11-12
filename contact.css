@@ -257,20 +257,20 @@ a.linkedinlogolink{
   /* Styles for small screens (e.g., smartphones) */
   @media screen and (max-width: 768px) {
     /* Add your responsive styles here */
-    body {
+      body {
         background-color: #85a290;
-        overflow: hidden; /* Reset overflow to allow scrolling on small screens */
-      }
+        overflow:auto; /* Reset overflow to allow scrolling on small screens */
+        }
     
-     main {
+      main {
         margin: 0;
       }
     
       .navbar ul {
         padding: 0;
         margin: 0;
-        padding-top: 27px;
-  
+        padding-top: 14px;
+        padding-bottom: 5px;
         
       }
     
@@ -279,16 +279,16 @@ a.linkedinlogolink{
           text-align: center;
           padding: 15px;
           margin-left: 0;
-          font-size: 24px;
-          padding-left: 30px;
+          font-size: 23px;
+          padding-left: 25px;
           padding-bottom: 10px;
-          padding-top: 5px;
+          padding-top: 8px;
           
         }
-      
+       
         .navbar li {
           float: left;
-          font-size: 17px;
+          
           text-align: center;
           margin-bottom: 10px;
           margin-left: 0px;
@@ -298,8 +298,8 @@ a.linkedinlogolink{
         }
     
         .logowebsite {
-          width: 80px;
-          height: 80px;
+          width: 77px;
+          height: 77px;
           margin-right: 5%; /* Adjust as needed */
           margin-left: auto; /* Align to the right */
           border-radius: 50%;
@@ -329,35 +329,31 @@ a.linkedinlogolink{
     
     
     .contact-container {
-        flex-direction: column; /* Stack content vertically for small screens */
-        align-items: center; /* Center vertically */
-        justify-content: center; /* Center horizontally */
-        margin: 0px; /* Add some margin for spacing */
-        margin-left: 20px;
-        margin-top: 230px;
-        
+        position: center;
         
     }
 
     .contact-content {
-        font-size: 23px; /* Adjust font size for readability on small screens */
-        width: fit-content;
+        font-size: 27px; /* Adjust font size for readability on small screens */
+        
         text-align: center; /* Center-align text */
         margin: 0px; /* Add margin for spacing */
-        margin-left: 187px;
+        margin-left: 200px;
         padding-left: 9px;
-        display: vertical;
+        display: center;
         
        
     }
 
     .text {
-        font-size: 24px; /* Adjust font size for small screens */
-        display: vertical;
+        font-size: 20px; /* Adjust font size for small screens */
+        display: center;
+
     }
 
     .text:hover {
-        font-size: inherit; /* Adjust font size on hover for small screens */
+        font-size: none; /* Adjust font size on hover for small screens */
+        transition: none;
     }
 
     .githublogo{
@@ -449,23 +445,13 @@ a.linkedinlogolink{
         
     }
 
-
-
-
-
-
-
-
-
-
-
-  .footer {
+ .footer {
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
     background-color: #3e2b2c;
-    font-size: 22px;
+    font-size: 25px;
     color: white;
     text-align: center;
     padding-left: 21px;
