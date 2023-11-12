@@ -1,6 +1,6 @@
 body {
     background-color: #85a290;
-    
+    overflow: auto;
     
 }
  main {
@@ -262,7 +262,7 @@ a.linkedinlogolink{
         overflow: auto; /* Reset overflow to allow scrolling on small screens */
       }
     
-      main {
+     main {
         margin: 0;
       }
     
@@ -298,8 +298,8 @@ a.linkedinlogolink{
         }
     
         .logowebsite {
-          width: 90px;
-          height: 90px;
+          width: 80px;
+          height: 80px;
           margin-right: 5%; /* Adjust as needed */
           margin-left: auto; /* Align to the right */
           border-radius: 50%;
@@ -340,17 +340,20 @@ a.linkedinlogolink{
     }
 
     .contact-content {
-        font-size: 20px; /* Adjust font size for readability on small screens */
+        font-size: 23px; /* Adjust font size for readability on small screens */
+        width: fit-content;
         text-align: center; /* Center-align text */
-        margin: 20px; /* Add margin for spacing */
-        margin-left: auto;
-        padding-left: 5;
+        margin: 0px; /* Add margin for spacing */
+        margin-left: 187px;
+        padding-left: 9px;
         display: vertical;
+        
+       
     }
 
     .text {
-        font-size: 23px; /* Adjust font size for small screens */
-        
+        font-size: 24px; /* Adjust font size for small screens */
+        display: vertical;
     }
 
     .text:hover {
@@ -462,7 +465,7 @@ a.linkedinlogolink{
     left: 0;
     right: 0;
     background-color: #3e2b2c;
-    font-size: 27px;
+    font-size: 22px;
     color: white;
     text-align: center;
     padding-left: 21px;
@@ -476,12 +479,8 @@ a.linkedinlogolink{
       margin: 0 10px; /* Add spacing between the text and the link */
      
   }
-  .footer p{
-    font-size: 105%;
-  }
-  .footer a{
-    font-size: 100%;
-  }
+  
+ 
   .footer a:hover{
     color:  #0072b1 ;
     text-decoration:overline;
