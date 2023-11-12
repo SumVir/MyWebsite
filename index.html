@@ -21,7 +21,20 @@
       </ul>
      
    </nav>
-   
+   <audio id="backgroundMusic" autoplay loop volume="0.5">
+    <source src="artificial-intelligence.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+   </audio>
+   <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var audio = document.getElementById("backgroundMusic");
+
+        setTimeout(function() {
+            audio.currentTime = 0; // Reset the playback to the beginning
+            audio.play();
+        }, 10000); // 30 seconds in milliseconds
+    });
+   </script>
     <div class="home-container">
                 <div class="home-content">
                     <p>Hi, I'm <strong>Nursaid Kamilli</strong> <br>Cybersecurity Enthusiast</br></p>
