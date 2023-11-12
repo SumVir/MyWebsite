@@ -259,7 +259,7 @@ a.linkedinlogolink{
     /* Add your responsive styles here */
     body {
         background-color: #85a290;
-        overflow: auto; /* Reset overflow to allow scrolling on small screens */
+        overflow: hidden; /* Reset overflow to allow scrolling on small screens */
       }
     
      main {
