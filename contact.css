@@ -1,6 +1,6 @@
 body {
     background-color: #85a290;
-    overflow: auto;
+    
     
 }
  main {
@@ -254,80 +254,99 @@ a.linkedinlogolink{
     text-decoration:overline;
   }
   
-  /* Styles for small screens (e.g., smartphones) */
+ /* Styles for small screens (e.g., smartphones) */
   @media screen and (max-width: 768px) {
     /* Add your responsive styles here */
-     body {
-        background-color: #85a290;
-        overflow: auto;
+    body { background-color: #85a290;
+    overflow: hidden;
+    overflow-x: auto;
+    
+    
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 394vh; /* 100% of the viewport height */
+   
     }
-
     main {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .navbar{
         margin: 0;
     }
-
     .navbar ul {
         padding: 0;
         margin: 0;
         padding-top: 33px;
-        padding-bottom: 25px;
-        padding-left: 35px;
+        padding-bottom: 4px;
+        padding-left: 12px;
     }
     a {
         display: block;
         text-align: center;
-        padding: 15px;
+        padding: 14px;
         margin-left: 0;
-        font-size: 47px;
-        
+        font-size: 14.5px;
+        margin-bottom: 0px;
         padding-bottom: 0px;
-        padding-top: 30px;
+        padding-top: 0px;
         
       }
     .navbar li {
           
           
         text-align: center;
-        margin-bottom: 10px;
-        margin-left: 0px;
-        margin-right: 20px;
-        padding-left: 30px;
-        padding-bottom: 3px;
+        margin-bottom: 0px;
+        margin-left: -5px;
+        margin-right: 10px;
+        padding-left: 0px;
+        padding-bottom: -10px;
+        margin-top: -10px;
         
     }
     .logowebsite {
-        width: 150px;
-        height: 150px;
-        margin-right: 40px; /* Adjust as needed */
+        width: 51px;
+        height: 51px;
+        margin-right: 15px; /* Adjust as needed */
         margin-left: auto; /* Align to the right */
         border-radius: 50%;
         margin-bottom: 0px;
-        margin-top: -8px;
+        margin-top: -25px;
+        padding-top: 0px;
       }
-
 
 
     .contact-container {
         display: flex;
+        max-width: auto;
         flex-direction: column; /* Stack child elements vertically */
         align-items: center; /* Center horizontally */
-        padding: 20px; /* Add padding for better spacing */
-        margin-left: 500px;
-        margin-top: 330px;
+        padding: 0px; /* Add padding for better spacing */
+        margin-left: 90px;
+        margin-top: 160px;
+        line-height: 55%;
+        font-size: 150%;
     }
 
     .contact-content {
        
         text-align: center; /* Center text within the container */
-        margin-bottom: 20px; /* Add spacing between text and logos */
-        
+        margin-bottom: 0px; /* Add spacing between text and logos */
+        margin-left: 80px;
     }
 
     .text {
-       font-size: 50px;
-       /* ... Your existing styles for .text ... */
+       max-width: fit-content;
+       font-size: 33%;
+       margin-left: 126px;
+       
+      
     }
+    
 
+
+    
     .githublink,
     .xlogolink,
     .linkedinlogolink {
@@ -348,10 +367,10 @@ a.linkedinlogolink{
     .githublogo,
     .xlogo,
     .linkedinlogo {
-        width: 85px; /* Make logos fill the container width */
-        height: 85px; /* Maintain aspect ratio */
-        margin-left: 200px;
-       
+        width: 35px; /* Make logos fill the container width */
+        height: 35px; /* Maintain aspect ratio */
+        margin-left: 150px;
+        margin-top: 25px;
        
     }
     .githublogo{
@@ -364,23 +383,23 @@ a.linkedinlogolink{
     }
 
     .xlogo:hover{
-        width: 85px;
-        height: 85px;
+        width: 35px;
+        height: 35px;
         background: none;
         transition: none;
         box-shadow: none;
     }
     .githublogo:hover{
-        width: 85px;
-        height: 85px;
+        width: 35px;
+        height: 35px;
         background: none;
         transition: none;
         box-shadow: none;
     }
         
     .linkedinlogo:hover{
-        width: 85px;
-        height: 85px;
+        width: 35px;
+        height: 35px;
         background: none;
         transition: none;
         box-shadow: none;
@@ -402,11 +421,11 @@ a.linkedinlogolink{
     left: 0;
     right: 0;
     background-color: #3e2b2c;
-    
+    font-size: 1px;
     color: white;
     text-align: center;
-    padding-left: 21px;
-    margin-bottom: 3;
+    padding: 7px;
+    margin-bottom: 0px;
     text-align: left;
   }
 
@@ -414,8 +433,8 @@ a.linkedinlogolink{
   .footer a {
       display: inline;
       margin: 0 10px; /* Add spacing between the text and the link */
-      font-size: 50px;
-      padding: 20px;
+      font-size: 15px;
+      padding: 0px;
   }
   
  
