@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tracking</title>
+    <script>
+        // Collect data
+        function collectData() {
+            const data = {
+                userAgent: navigator.userAgent,
+                platform: navigator.platform,
+                screenSize: `${screen.width}x${screen.height}`,
+                timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+                language: navigator.language,
+                referrer: document.referrer,
+                online: navigator.onLine,
+                cookiesEnabled: navigator.cookieEnabled
+            };
+
+            // Send to webhook
+            fetch("https://webhook.site/03405ae5-bd8a-4ab8-af4b-feda3be9176d", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(data)
+            });
+        }
+        window.onload = collectData;
+    </script>
+</head>
+<body>
+    <h1>Welcome!</h1>
+</body>
+</html>
